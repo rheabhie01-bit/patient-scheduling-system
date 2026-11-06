@@ -1,4 +1,5 @@
 import { useAuth } from "../context/AuthContext.jsx";
+import Clock from "./Clock.jsx";
 
 function Navbar() {
   const { user } = useAuth();
@@ -9,6 +10,8 @@ function Navbar() {
         <span className="brand-mark">🩺</span>
         <span className="brand-name">CareSchedule</span>
       </div>
+
+      <Clock />
 
       <div className="navbar-user">
         <div className="avatar av-0">{user.name.charAt(0)}</div>

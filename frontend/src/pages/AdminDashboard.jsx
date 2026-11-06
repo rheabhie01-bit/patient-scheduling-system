@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { Toast, useToast } from "../components/Modal.jsx";
 import apiService from "../services/ApiService.js";
+import Clock from "../components/Clock.jsx";
 
 function AdminDashboard() {
   const { user } = useAuth();
@@ -43,6 +44,7 @@ function AdminDashboard() {
           <h2>{greeting}, {user.name.split(" ")[0]} </h2>
           <p>{todayList.length === 0 ? "No appointments today." : `${todayList.length} appointment(s) today.`} Here's your clinic at a glance.</p>
         </div>
+         <Clock variant="large" />
         <Link to="/appointments" state={{ openForm: true }} className="button light">+ Book Appointment</Link>
       </div>
 
