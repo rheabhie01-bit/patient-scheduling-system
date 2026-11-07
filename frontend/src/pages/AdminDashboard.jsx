@@ -44,7 +44,7 @@ function AdminDashboard() {
           <h2>{greeting}, {user.name.split(" ")[0]} </h2>
           <p>{todayList.length === 0 ? "No appointments today." : `${todayList.length} appointment(s) today.`} Here's your clinic at a glance.</p>
         </div>
-         <Clock variant="large" />
+         
         <Link to="/appointments" state={{ openForm: true }} className="button light">+ Book Appointment</Link>
       </div>
 
