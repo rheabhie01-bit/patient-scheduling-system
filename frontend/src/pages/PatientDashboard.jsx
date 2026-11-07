@@ -57,6 +57,17 @@ function PatientDashboard() {
         <div className="stat-card"><div className="stat-icon icon-indigo">🗂️</div><div><span className="stat-value">{appointments.length}</span><span className="stat-label">Total visits</span></div></div>
       </div>
 
+      <div className="card" style={{ marginBottom: 20 }}>
+        <div className="section-head">
+          <h3>Before Your Visit</h3>
+        </div>
+        <ul style={{ margin: 0, paddingLeft: 22, color: "var(--muted)" }}>
+          <li>Arrive 10–15 minutes before your appointment.</li>
+          <li>Bring your valid ID and necessary documents.</li>
+          <li>Check your confirmed appointment schedule.</li>
+        </ul>
+      </div>
+
       {cancelledByClinic.length > 0 && (
         <div className="card" style={{ marginBottom: 20 }}>
           <div className="section-head">
