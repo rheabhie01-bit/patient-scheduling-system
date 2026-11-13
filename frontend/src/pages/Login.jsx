@@ -16,9 +16,9 @@ function BrandMark() {
 }
 
 const FEATURES = [
-  { title: "Live availability", text: "Only open times are shown.", icon: <Icon><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></Icon> },
-  { title: "Calendar views", text: "Month and week at a glance.", icon: <Icon><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></Icon> },
-  { title: "Role-based access", text: "Separate views for each role.", icon: <Icon><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6l-8-3Z" /></Icon> },
+  { title: "Book appointments", text: "Choose an open time.", icon: <Icon><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4M8 14h2M14 14h2M8 18h2" /></Icon> },
+  { title: "View schedules", text: "Keep every visit in view.", icon: <Icon><path d="M3 12h4l2.2-6 4.1 12 2.2-6H21" /><path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z" /></Icon> },
+  { title: "Stay organized", text: "Manage visits in one place.", icon: <Icon><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6l-8-3Z" /><path d="m9 12 2 2 4-4" /></Icon> },
 ];
 
 function Login() {
@@ -58,12 +58,19 @@ function Login() {
   };
 
   return (
-    <div className="auth-page">
+    <div className="auth-page login-page">
       <section className="auth-hero">
-        <div className="brand"><BrandMark /><span className="brand-name">CareSchedule</span></div>
+        <div className="brand">
+          <BrandMark />
+          <span className="brand-copy">
+            <span className="brand-name">Care<span className="brand-accent">Schedule</span></span>
+            <span className="brand-tagline">Smart care. Better schedule.</span>
+          </span>
+        </div>
 
         <div className="auth-hero-main">
-          <h1>Care that fits your calendar.</h1>
+          <span className="login-rule" aria-hidden="true" />
+          <h1>Care that fits<br />your <span>calendar.</span></h1>
           <p className="lead">See real doctor availability, choose a free time and manage every visit from one calm, organized place.</p>
         </div>
 
@@ -81,7 +88,10 @@ function Login() {
         <form className="auth-card" onSubmit={handleSubmit}>
           <div className="brand-mobile"><BrandMark /> CareSchedule</div>
 
-          <div>
+          <div className="login-heading">
+            <span className="login-emblem" aria-hidden="true">
+              <Icon size={28}><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" /><path d="M5 12h3l1.5-3 3 6 1.5-3H19" /></Icon>
+            </span>
             <h2 className="auth-title">Welcome back</h2>
             <p className="auth-sub">Sign in to manage your appointments.</p>
           </div>
