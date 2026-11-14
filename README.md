@@ -27,3 +27,5 @@ Change the sample passwords and `JWT_SECRET` in `backend/.env` before real use.
 - Appointments appear in a month calendar (with a list view), and schedules in a weekly timetable.
 - Booking shows only real free slots. Double bookings, past times, times outside a
   doctor's hours and overlapping schedules are all blocked.
+
+Contributor practice update.
